@@ -251,21 +251,11 @@
             if (checkCollision(userPaddle, ball.x, ball.y, ball.size)) {
                 ball.speedX = Math.abs(ball.speedX);
                 ball.x = userPaddle.x + userPaddle.width + ball.size;
-
-                // Add spin based on where ball hits paddle
-                const deltaY = (ball.y - (userPaddle.y + userPaddle.height / 2)) / userPaddle.height;
-                ball.speedY += deltaY * 4;
-                ball.speedY = Math.max(-ball.maxSpeed, Math.min(ball.maxSpeed, ball.speedY));
             }
 
             if (checkCollision(aiPaddle, ball.x, ball.y, ball.size)) {
                 ball.speedX = -Math.abs(ball.speedX);
                 ball.x = aiPaddle.x - ball.size;
-
-                // Add spin based on where ball hits paddle
-                const deltaY = (ball.y - (aiPaddle.y + aiPaddle.height / 2)) / aiPaddle.height;
-                ball.speedY += deltaY * 4;
-                ball.speedY = Math.max(-ball.maxSpeed, Math.min(ball.maxSpeed, ball.speedY));
             }
 
             // Ball out of bounds - scoring
@@ -275,6 +265,18 @@
             } else if (ball.x + ball.size > canvas.width) {
                 score.user++;
                 resetBall();
+            }
+
+            // Check for win condition
+            if (score.user >= 10 && score.ai >= 10) {
+                alert("The game is a draw!");
+                resetGame();
+            } else if (score.user >= 10) {
+                alert("You win!");
+                resetGame();
+            } else if (score.ai >= 10) {
+                alert("Computer wins!");
+                resetGame();
             }
 
             // Update score display

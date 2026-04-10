@@ -2,11 +2,10 @@ A modern browser-based Pong Game built using JavaScript, featuring smooth animat
 
 🚀 Live Demo
 
-👉 Add your GitHub Pages link here
-Example: https://yourusername.github.io/pong-game
+👉 https://github.com/tuhin974/Tuhin_Games
 
 📌 Features
-🎮 Smooth paddle movement (Mouse + Keyboard)
+🎮 Smooth paddle movement (Mouse)
 🤖 AI-controlled opponent
 ⚡ Realistic ball physics with spin effect
 📊 Live score tracking
@@ -14,9 +13,7 @@ Example: https://yourusername.github.io/pong-game
 🏆 Win condition (First to 10 points)
 🎨 Clean neon-style UI
 🛠️ Tech Stack
-HTML5
-CSS3
-JavaScript (Vanilla JS)
+HTML
 
 🎯 Game Logic Highlights
 🟢 Collision Handling
@@ -34,28 +31,12 @@ Keeps gameplay balanced and controlled
 
 🕹️ Controls
 🖱️ Mouse → Move paddle up/down
-⬆️⬇️ Arrow Keys → Keyboard control
 🤖 Computer → Controls right paddle automatically
 🏆 Rules
 First player to reach 10 points wins
 If both reach 10 → Draw
 Game resets automatically after result.
 
-⚙️ How to Run Locally
-Clone the repository:
-git clone https://github.com/yourusername/pong-game.git
-Open the project folder
-Run:
-open index.html
-
-or simply double-click index.html
-
-📈 Future Improvements
-🔊 Sound effects
-📱 Mobile responsiveness
-🎚️ Difficulty levels
-👥 Multiplayer mode
-🤝 Contributing
 
 Feel free to fork this project and submit pull requests.
 
